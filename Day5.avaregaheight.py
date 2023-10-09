@@ -12,3 +12,12 @@ average_height = total_height / len(student_heights)
 print(f"total height = {total_height}")
 print(f"number of students = {len(student_heights)}")
 print(f"average height = {round(average_height)}")
+
+
+###Calculating highest score in classroom
+highest_score = 0
+for score in student_heights:
+    if score > highest_score:
+        highest_score = score
+
+print(f"The highest score in the class is: {score}")
