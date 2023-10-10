@@ -21,3 +21,16 @@ for score in student_heights:
         highest_score = score
 
 print(f"The highest score in the class is: {score}")
+
+
+####Calculating total even numbers between input range
+target = int(input()) # Enter a number between 0 and 1000
+# 🚨 Do not change the code above ☝️
+
+# Write your code here 👇
+even_total = 0
+for number in range( 0, target+1 ,2) :
+  even_total += number
+
+print(even_total)
+  
