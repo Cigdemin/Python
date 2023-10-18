@@ -19,14 +19,17 @@ operations = {
 num1 = int(input("What is the first number? : "))
 for symbol in operations:
   print(symbol)
-operation_symbols = input("Pick an operation from the line above: ")
-num2 = int(input("What is the second number? : "))
-calculation_function = operations[operation_symbols]
-first_answer = calculation_function(num1,num2)
-print(f"{num1} {operation_symbols} {num2} = {first_answer}")
-
-operation_symbol = input("Pick an operation: ") 
-num3 = int(input("What's the next number?: "))
-calculation_function = operations[operation_symbol] 
-second_answer = calculation_function(first_answer,num3)
-print(f"{first_answer} {operation_symbol} {num3} = {second_answer}")
+continue_calculation = True
+while continue_calculation == True:
+  operation_symbols = input("Pick an operation from the line above: ")
+  num2 = int(input("What is the second number? : "))
+  calculation_function = operations[operation_symbols]
+  answer = calculation_function(num1,num2)
+  print(f"{num1} {operation_symbols} {num2} = {answer}")
+  response_continue = input(f"Type 'y' to continue with the {answer} or type 'n' to stop calculation: ")
+  if "y" in response_continue :
+    num1 = answer
+  else:
+    continue_calculation = False
+    print("GoodBye")
+  
