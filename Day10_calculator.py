@@ -19,13 +19,13 @@ operations = {
 from calculator_art import logo
 def calculator():
     print(logo)
-    num1 = int(input("What is the first number? : "))
+    num1 = float(input("What is the first number? : "))
     for symbol in operations:
         print(symbol)
     continue_calculation = True
     while continue_calculation == True:
         operation_symbols = input("Pick an operation from the line above: ")
-        num2 = int(input("What is the second number? : "))
+        num2 = float(input("What is the second number? : "))
         calculation_function = operations[operation_symbols]
         answer = calculation_function(num1,num2)
         print(f"{num1} {operation_symbols} {num2} = {answer}")
